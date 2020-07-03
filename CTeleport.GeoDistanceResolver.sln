@@ -17,6 +17,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CTeleport.GeoDistanceResolv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTeleport.GeoDistanceResolver.Web", "src\Backend\CTeleport.GeoDistanceResolver.Web\CTeleport.GeoDistanceResolver.Web.csproj", "{78BFC16D-E0B5-44BB-9F82-62A9D734FF2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTeleport.GeoDistanceResolver.Data", "src\Core\CTeleport.GeoDistanceResolver.Data\CTeleport.GeoDistanceResolver.Data.csproj", "{85D4FEAE-FB63-488C-982C-5EDC94655388}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{AF9D2F9A-0CFA-496C-8577-D7BB2283E828}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTeleport.GeoDistanceResolver.Application", "src\Core\CTeleport.GeoDistanceResolver.Application\CTeleport.GeoDistanceResolver.Application.csproj", "{D3135BF1-EAA7-4382-BC7F-16195D9ED8E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +45,14 @@ Global
 		{78BFC16D-E0B5-44BB-9F82-62A9D734FF2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78BFC16D-E0B5-44BB-9F82-62A9D734FF2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78BFC16D-E0B5-44BB-9F82-62A9D734FF2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85D4FEAE-FB63-488C-982C-5EDC94655388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85D4FEAE-FB63-488C-982C-5EDC94655388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85D4FEAE-FB63-488C-982C-5EDC94655388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85D4FEAE-FB63-488C-982C-5EDC94655388}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3135BF1-EAA7-4382-BC7F-16195D9ED8E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3135BF1-EAA7-4382-BC7F-16195D9ED8E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3135BF1-EAA7-4382-BC7F-16195D9ED8E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3135BF1-EAA7-4382-BC7F-16195D9ED8E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +64,8 @@ Global
 		{F91B017E-25F6-450A-9695-51DEF94246E0} = {899B9740-1FF8-4034-B902-BD2E3371F800}
 		{EE2FC8FC-E546-4411-8FD4-944D75D4B84F} = {F91B017E-25F6-450A-9695-51DEF94246E0}
 		{78BFC16D-E0B5-44BB-9F82-62A9D734FF2A} = {899B9740-1FF8-4034-B902-BD2E3371F800}
+		{85D4FEAE-FB63-488C-982C-5EDC94655388} = {E50C659A-9FE4-4132-B631-504DFA9167F6}
+		{D3135BF1-EAA7-4382-BC7F-16195D9ED8E0} = {E50C659A-9FE4-4132-B631-504DFA9167F6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {01F3CC4B-0B08-458C-9507-FFF679876DC1}

@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\CTeleport.GeoDistanceResolver.Application\CTeleport.GeoDistanceResolver.Application.csproj" />
     <ProjectReference Include="..\..\..\Core\CTeleport.GeoDistanceResolver.Core\CTeleport.GeoDistanceResolver.Core.csproj" />
   </ItemGroup>
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using CTeleport.GeoDistanceResolver.Core.Exceptions;
+using CTeleport.GeoDistanceResolver.Data.Exceptions;
 using RestSharp;
 using RestSharp.Serialization.Json;
 

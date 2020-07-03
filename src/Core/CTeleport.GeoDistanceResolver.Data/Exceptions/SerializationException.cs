@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CTeleport.GeoDistanceResolver.Core.Exceptions
+namespace CTeleport.GeoDistanceResolver.Data.Exceptions
 {
     /// <summary>
     /// Serialization Exception
@@ -10,6 +8,10 @@ namespace CTeleport.GeoDistanceResolver.Core.Exceptions
     public class SerializationException: FriendlyException
     {
         public SerializationException(string message) : base(message)
+        {
+        }
+
+        public SerializationException(string message, Exception ex) : base(message, ex)
         {
         }
 

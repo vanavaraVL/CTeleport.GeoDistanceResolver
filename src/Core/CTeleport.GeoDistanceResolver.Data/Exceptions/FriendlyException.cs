@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CTeleport.GeoDistanceResolver.Core.Exceptions
+namespace CTeleport.GeoDistanceResolver.Data.Exceptions
 {
     /// <summary>
     /// Friendly exception
@@ -14,6 +12,10 @@ namespace CTeleport.GeoDistanceResolver.Core.Exceptions
         }
 
         public FriendlyException(Exception ex) : base(ex.Message, ex)
+        {
+        }
+
+        public FriendlyException(string message, Exception ex) : base(message, ex)
         {
         }
     }

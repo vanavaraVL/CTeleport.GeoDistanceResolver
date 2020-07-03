@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Text;
+using CTeleport.GeoDistanceResolver.Application.Configuration.Extensions;
+using CTeleport.GeoDistanceResolver.Core.Configuration.Extensions;
 using CTeleport.GeoDistanceResolver.Core.GeoDistanceResolvers.Implementation;
 using CTeleport.GeoDistanceResolver.Core.GeoDistanceResolvers.Infrastructure;
 using CTeleport.GeoDistanceResolver.Core.GeoGateway.Data;
@@ -36,11 +38,9 @@ namespace CTeleport.GeoDistanceResolver.Test.Environments
 
             var configurationRoot = GetConfigurationRoot();
 
-            services.Configure<GatewaySettings>(
-                options => configurationRoot.GetSection(GatewaySettings.SectionName).Bind(options));
-
-            services.AddScoped<IGatewayService, GatewayService>();
-            services.AddScoped<IGeoDistanceResolver, DistanceResolver>();
+            services.ConfigureGateway(configurationRoot);
+            services.ConfigureGeoDistanceResolver();
+            services.ConfigureGeoCoordinateService();
 
             _services = services.BuildServiceProvider();
         }

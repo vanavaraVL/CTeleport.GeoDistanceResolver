@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using CTeleport.GeoDistanceResolver.Core.Exceptions;
 using CTeleport.GeoDistanceResolver.Core.Extensions;
 using CTeleport.GeoDistanceResolver.Core.GeoGateway.Data;
 using CTeleport.GeoDistanceResolver.Core.GeoGateway.Infrastructure;
+using CTeleport.GeoDistanceResolver.Data.Exceptions;
 using Microsoft.Extensions.Options;
 using RestSharp;
 
@@ -53,7 +51,7 @@ namespace CTeleport.GeoDistanceResolver.Core.GeoGateway.Implementation
             }
             catch (Exception ex)
             {
-                throw new FriendlyException($"Type: Unknown. Path name: {path}. Exception: {ex.Message}");
+                throw new SerializationException($"Type: Unknown. Path name: {path}", ex);
             }
         }
     }

@@ -1,26 +1,71 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.IO;
+using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace CTeleport.GeoDistanceResolver.Web
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            await CreateHostBuilder(args).Build().RunAsync();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
+            ConfigureDefaultHostBuilder(args)
+                .ConfigureWebHostDefaults(
+                    webBuilder =>
+                    {
+                        webBuilder.UseStartup<Startup>();
+                    });
+
+        private static IHostBuilder ConfigureDefaultHostBuilder(string[] args)
+        {
+            var host = Host.CreateDefaultBuilder(args);
+
+            // content root
+            host.UseContentRoot(Path.GetDirectoryName(new Uri(Assembly.GetExecutingAssembly().CodeBase).LocalPath));
+
+            // configure settings
+            host.ConfigureAppConfiguration(
+                configurationBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
-                });
+                    configurationBuilder.SetBasePath(
+                        Path.GetDirectoryName(new Uri(Assembly.GetExecutingAssembly().CodeBase).LocalPath));
+
+                    configurationBuilder.AddJsonFile(
+                        "Appsettings/appsettings.json",
+                        optional: false,
+                        reloadOnChange: true);
+
+                    configurationBuilder.AddEnvironmentVariables();
+
+                    configurationBuilder
+                        .Build();
+                }
+            );
+
+            // configure logging
+            host.ConfigureLogging(
+                (hostingContext, logging) =>
+                {
+                    Log.Logger = new LoggerConfiguration()
+                        .Enrich.FromLogContext()
+                        .WriteTo.Console()
+                        .CreateLogger();
+
+                    logging.AddSerilog(Log.Logger, true);
+                }
+            );
+
+            host.UseSerilog();
+            
+            return host;
+        }
     }
 }
