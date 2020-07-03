@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using CTeleport.GeoDistanceResolver.Core.GeoDistanceResolvers.Implementation;
-using CTeleport.GeoDistanceResolver.Core.GeoDistanceResolvers.Infrastructure;
+﻿using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace CTeleport.GeoDistanceResolver.Application.Configuration.Extensions
 {
@@ -19,8 +16,12 @@ namespace CTeleport.GeoDistanceResolver.Application.Configuration.Extensions
         /// <returns></returns>
         public static IServiceCollection ConfigureGeoCoordinateService(this IServiceCollection services)
         {
-            services.AddScoped<GeoCoordinateService>();
+            services.AddMemoryCache();
 
+            services.TryAdd(ServiceDescriptor.Singleton<IMemoryCache, MemoryCache>());
+
+            services.AddScoped<GeoCoordinateService>();
+            
             return services;
         }
     }

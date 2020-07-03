@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using CTeleport.GeoDistanceResolver.Core.GeoDistanceResolvers.Infrastructure;
-using CTeleport.GeoDistanceResolver.Core.GeoGateway.Infrastructure;
 using CTeleport.GeoDistanceResolver.Test.Environments;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

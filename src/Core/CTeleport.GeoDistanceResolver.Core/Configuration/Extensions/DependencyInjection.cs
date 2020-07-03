@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using CTeleport.GeoDistanceResolver.Core.GeoDistanceResolvers.Implementation;
+﻿using CTeleport.GeoDistanceResolver.Core.GeoDistanceResolvers.Implementation;
 using CTeleport.GeoDistanceResolver.Core.GeoDistanceResolvers.Infrastructure;
 using CTeleport.GeoDistanceResolver.Core.GeoGateway.Data;
 using CTeleport.GeoDistanceResolver.Core.GeoGateway.Implementation;
@@ -24,6 +21,8 @@ namespace CTeleport.GeoDistanceResolver.Core.Configuration.Extensions
             this IServiceCollection services,
             IConfiguration configurationRoot)
         {
+            services.AddMemoryCache();
+
             services.Configure<GatewaySettings>(
                 options => configurationRoot.GetSection(GatewaySettings.SectionName).Bind(options));
 
