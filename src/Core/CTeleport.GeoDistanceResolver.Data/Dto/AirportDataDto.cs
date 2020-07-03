@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CTeleport.GeoDistanceResolver.Data.Dto.Responses
+﻿namespace CTeleport.GeoDistanceResolver.Data.Dto
 {
     /// <summary>
     /// Dto for airport

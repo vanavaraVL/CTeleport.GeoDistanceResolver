@@ -15,9 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F91B017E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CTeleport.GeoDistanceResolver.Test", "src\Backend\Tests\CTeleport.GeoDistanceResolver.Test\CTeleport.GeoDistanceResolver.Test.csproj", "{EE2FC8FC-E546-4411-8FD4-944D75D4B84F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTeleport.GeoDistanceResolver.Web", "src\Backend\CTeleport.GeoDistanceResolver.Web\CTeleport.GeoDistanceResolver.Web.csproj", "{78BFC16D-E0B5-44BB-9F82-62A9D734FF2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CTeleport.GeoDistanceResolver.Web", "src\Backend\CTeleport.GeoDistanceResolver.Web\CTeleport.GeoDistanceResolver.Web.csproj", "{78BFC16D-E0B5-44BB-9F82-62A9D734FF2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTeleport.GeoDistanceResolver.Data", "src\Core\CTeleport.GeoDistanceResolver.Data\CTeleport.GeoDistanceResolver.Data.csproj", "{85D4FEAE-FB63-488C-982C-5EDC94655388}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CTeleport.GeoDistanceResolver.Data", "src\Core\CTeleport.GeoDistanceResolver.Data\CTeleport.GeoDistanceResolver.Data.csproj", "{85D4FEAE-FB63-488C-982C-5EDC94655388}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{AF9D2F9A-0CFA-496C-8577-D7BB2283E828}"
 	ProjectSection(SolutionItems) = preProject
@@ -25,7 +25,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTeleport.GeoDistanceResolver.Application", "src\Core\CTeleport.GeoDistanceResolver.Application\CTeleport.GeoDistanceResolver.Application.csproj", "{D3135BF1-EAA7-4382-BC7F-16195D9ED8E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CTeleport.GeoDistanceResolver.Application", "src\Core\CTeleport.GeoDistanceResolver.Application\CTeleport.GeoDistanceResolver.Application.csproj", "{D3135BF1-EAA7-4382-BC7F-16195D9ED8E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{BA728408-6A3F-405B-8022-A833DDF66347}"
+	ProjectSection(SolutionItems) = preProject
+		docs\doc.html = docs\doc.html
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

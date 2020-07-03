@@ -1,6 +1,6 @@
 ﻿using CTeleport.GeoDistanceResolver.Core.GeoDistanceResolvers.Infrastructure;
 using CTeleport.GeoDistanceResolver.Core.GeoGateway.Data;
-using CTeleport.GeoDistanceResolver.Data.Dto.Responses;
+using CTeleport.GeoDistanceResolver.Data.Dto;
 
 namespace CTeleport.GeoDistanceResolver.Application.Converters
 {
